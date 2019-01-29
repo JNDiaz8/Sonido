@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         titulo = findViewById(R.id.titulo);
         duracion = findViewById(R.id.duracion);
+        sb_duracion = findViewById(R.id.sb_duracion);
 
         sb_duracion.setClickable(false);
 
@@ -33,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         tiempoFinal = mediaPlayer.getDuration();
         sb_duracion.setMax((int) tiempoFinal);
         titulo.setText("codigo_davinci.mp3");
-
-
 
     }
 

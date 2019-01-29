@@ -70,48 +70,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/duracion" />
 
-    <ImageButton
-        android:id="@+id/ib_atras"
-        android:layout_width="68dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sb_duracion"
-        app:srcCompat="@android:drawable/ic_media_rew"
-        android:onClick="retroceso"/>
+        app:layout_constraintVertical_bias="0.0">
 
-    <ImageButton
-        android:id="@+id/ib_pause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/ib_atras"
-        app:layout_constraintTop_toBottomOf="@+id/sb_duracion"
-        app:srcCompat="@android:drawable/ic_media_pause"
-        android:onClick="pause"/>
+        <ImageButton
+            android:id="@+id/ib_atras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="retroceso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sb_duracion"
+            app:srcCompat="@android:drawable/ic_media_rew" />
 
-    <ImageButton
-        android:id="@+id/ib_play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/ib_pause"
-        app:layout_constraintTop_toBottomOf="@+id/sb_duracion"
-        app:srcCompat="@android:drawable/ic_media_play"
-        android:onClick="play"/>
+        <ImageButton
+            android:id="@+id/ib_pause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="pause"
+            app:srcCompat="@android:drawable/ic_media_pause" />
 
-    <ImageButton
-        android:id="@+id/ib_adelante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/ib_play"
-        app:layout_constraintTop_toBottomOf="@+id/sb_duracion"
-        app:srcCompat="@android:drawable/ic_media_ff"
-        android:onClick="avanzado"/>
+        <ImageButton
+            android:id="@+id/ib_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="play"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/ib_adelante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="avanzado"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
